@@ -1,0 +1,33 @@
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--nojustify{
+        justify-content: flex-start;
+    }
+
+    &--noalign{
+        align-items: baseline;
+    }
+}
+
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.backgroundContainer{
+    background-color: black;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.grid5{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}

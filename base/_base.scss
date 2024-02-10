@@ -1,0 +1,34 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+.map {
+	filter: grayscale(100%) invert(92%) contrast(93%);
+}
+
+.icon-cart {
+	width: 40px;
+	height: 40px;
+	stroke: white;
+}
+
+.icon-close {
+	width: 25px;
+	height: 25px;
+}
+
+img{
+	max-width: 100%;
+}

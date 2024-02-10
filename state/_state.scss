@@ -1,0 +1,29 @@
+.shoppingBasketIcon:hover,.shoppingBasketIcon:focus{
+    cursor: pointer;
+}
+
+.navBar li:hover,.navBar li:focus{
+    cursor: pointer;
+
+}
+
+.mainBtn:hover, .mainBtn:focus{
+    background-color: rgba(29, 29, 29, 0.795);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.hamburguer:hover, .hamburguer:focus{
+    transform: scale(1.05);
+
+}
+
+.btnAddBasket:hover, .btnAddBasket:focus{
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: rgba(29, 29, 29, 0.795);
+}
+
+.socialMediaIcons:hover, .socialMediaIcons:focus{
+    cursor: pointer;
+}

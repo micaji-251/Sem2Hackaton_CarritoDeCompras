@@ -1,0 +1,55 @@
+footer{
+    background-color: black;
+    color: white;
+
+}
+
+.footerTitle{
+    font-size: 3rem;
+    padding-bottom: 20px;
+
+}
+
+.footerArticleTitle{
+    color: gray;
+    font-size: 1rem;
+    padding: 15px 0;
+    font-weight: 600;
+}
+
+.footerArticleText{
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 10px 0;
+    font-weight: 600;
+}
+
+.horario{
+    padding: 20px 0 50px 0;
+
+}
+
+.socialMediaIcons img{
+    padding: 0 20px;
+}
+
+.footerOptions{
+    padding: 100px 0 50px 0;
+}
+
+.footerOptionsTitle{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0 0 15px;
+}
+
+.footerOptionsSubtext{
+    text-transform: lowercase;
+    padding: 5px 0;
+
+}
+
+.footerlogo{
+    padding: 30% 0;
+}

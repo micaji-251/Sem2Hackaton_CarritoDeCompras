@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+*, *::after, *::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.map {
+  filter: grayscale(100%) invert(92%) contrast(93%);
+}
+
+.icon-cart {
+  width: 40px;
+  height: 40px;
+  stroke: white;
+}
+
+.icon-close {
+  width: 25px;
+  height: 25px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex--nojustify {
+  justify-content: flex-start;
+}
+.flex--noalign {
+  align-items: baseline;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.backgroundContainer {
+  background-color: black;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.grid5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+
+.footerTitle {
+  font-size: 3rem;
+  padding-bottom: 20px;
+}
+
+.footerArticleTitle {
+  color: gray;
+  font-size: 1rem;
+  padding: 15px 0;
+  font-weight: 600;
+}
+
+.footerArticleText {
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 10px 0;
+  font-weight: 600;
+}
+
+.horario {
+  padding: 20px 0 50px 0;
+}
+
+.socialMediaIcons img {
+  padding: 0 20px;
+}
+
+.footerOptions {
+  padding: 100px 0 50px 0;
+}
+
+.footerOptionsTitle {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0 0 15px;
+}
+
+.footerOptionsSubtext {
+  text-transform: lowercase;
+  padding: 5px 0;
+}
+
+.footerlogo {
+  padding: 30% 0;
+}
+
+.headerBar {
+  padding: 30px 0;
+  padding-left: 50px;
+}
+
+.navBar {
+  color: white;
+}
+.navBar li {
+  padding: 0 15px;
+  font-size: 0.8rem;
+}
+
+.counterIcon {
+  background-color: rgba(255, 255, 255, 0.85);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: relative;
+  top: -20px;
+  left: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.mainHamburguerText {
+  color: white;
+  width: 50%;
+}
+
+.mainImageContainer {
+  width: 50%;
+}
+
+.mainHamburguerTitle {
+  font-size: 3rem;
+}
+
+.mainHamburguerSubtext {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.61);
+  padding: 10px 0 20px 0;
+}
+
+.mainHamburguer {
+  padding: 40px 0;
+}
+
+.mainBtn {
+  background-color: black;
+  color: white;
+  border: 1px red solid;
+  border-radius: 30px;
+  padding: 15px 30px;
+  margin-right: 20px;
+}
+
+.menuSection {
+  padding: 40px 0;
+}
+
+.menuMainTitle {
+  font-size: 1.5rem;
+  padding: 20px 0 30px 0;
+}
+
+.hamburguerImgContainer {
+  height: 240px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+.hamburguerImgContainer img {
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.menuTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.menuText {
+  padding: 20px;
+}
+
+.precio {
+  font-weight: 700;
+  padding: 20px 0;
+}
+
+.btnAddBasket {
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: 0.8rem;
+  border: none;
+  padding: 10px 10px;
+}
+
+.shoppingBasketIcon:hover, .shoppingBasketIcon:focus {
+  cursor: pointer;
+}
+
+.navBar li:hover, .navBar li:focus {
+  cursor: pointer;
+}
+
+.mainBtn:hover, .mainBtn:focus {
+  background-color: rgba(29, 29, 29, 0.795);
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.hamburguer:hover, .hamburguer:focus {
+  transform: scale(1.05);
+}
+
+.btnAddBasket:hover, .btnAddBasket:focus {
+  transform: scale(1.1);
+  cursor: pointer;
+  background-color: rgba(29, 29, 29, 0.795);
+}
+
+.socialMediaIcons:hover, .socialMediaIcons:focus {
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */

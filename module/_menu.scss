@@ -1,0 +1,43 @@
+.menuSection{
+    padding: 40px 0;
+}
+
+.menuMainTitle{
+    font-size: 1.5rem;
+    padding: 20px 0 30px 0;
+}
+
+.hamburguerImgContainer{
+    height: 240px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+
+    & img{
+        height: 240px;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.menuTitle{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.menuText{
+    padding: 20px;
+}
+
+.precio{
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+.btnAddBasket{
+    width: 100%;
+    background-color: black;
+    color:white;
+    font-size: 0.8rem;
+    border: none;
+    padding: 10px 10px;
+}
