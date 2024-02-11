@@ -20,17 +20,10 @@ function loadListeners(){
     document.addEventListener('DOMContentLoaded',getLocalStorage);
     menuSection.addEventListener('click', saveMenuIItem);
     shoppingBasketIcon.addEventListener('click',showBasketList);
+    basketListContainerItems.addEventListener('click',eraseIndividualItem);
 
 }
 
-function getLocalStorage(){
-    itemShoppingListAccumulted = JSON.parse(localStorage.getItem('shoppingList'));
-    if(!itemShoppingListAccumulted){
-        itemShoppingListAccumulted=[];
-        basketTotal.innerHTML='<p class="basketTotalText">CARRITO VACIO</p>';
-    }
-    printShoppingListAccumulated();
-}
 
 
 // FUNCIONES
@@ -64,35 +57,46 @@ function filterItemList(){
             item.quantity+=1      
             }
         })
-        saveLocalStorage();
+        saveLocalStorage(itemShoppingListAccumulted);
         printShoppingListAccumulated();
 
     } else{
 
         itemShoppingListAccumulted = [...itemShoppingListAccumulted, itemShoppingList];
-        saveLocalStorage();
+        saveLocalStorage(itemShoppingListAccumulted);
         printShoppingListAccumulated();
         return;
 
     }
 }
 
-function saveLocalStorage(){
-    localStorage.setItem('shoppingList', JSON.stringify(itemShoppingListAccumulted));
+function saveLocalStorage(listToSave){
+    localStorage.setItem('shoppingList', JSON.stringify(listToSave));
+
+}
+
+function getLocalStorage(){
+    itemShoppingListAccumulted = JSON.parse(localStorage.getItem('shoppingList'));
+    if(!itemShoppingListAccumulted){
+        itemShoppingListAccumulted=[];
+        basketTotal.innerHTML='<p class="basketTotalText">CARRITO VACIO</p>';
+    }else{
+    printShoppingListAccumulated();
+    }
 }
 
 function printShoppingListAccumulated(){
     basketListContainerItems.textContent=''
-    quantityIcon=0;
-    priceAcumulation=0;
+    // priceAcumulation=0;
     
     itemShoppingListAccumulted.forEach((item)=>{
         itemToPrint = document.createElement('div');
 
         itemToPrint.classList='basketItem grid4';
 
-        quantityIcon = quantityIcon + item.quantity;
-        priceAcumulation = priceAcumulation + (item.price*item.quantity);
+        // quantityIcon = quantityIcon + item.quantity;
+        // priceAcumulation = priceAcumulation + (item.price*item.quantity);
+
         itemToPrint.innerHTML=`
             <p class="quantity">${item.quantity}</p>
             <p class="basketTitle">${item.name}</p>
@@ -113,8 +117,13 @@ function printShoppingListAccumulated(){
         `
         basketListContainerItems.appendChild(itemToPrint);
     })
-    basketTotal.innerHTML=`<p class="basketTotalText">Total:  $ ${priceAcumulation}</p>`;
-    counterIcon.textContent=quantityIcon;
+
+    // basketTotal.innerHTML=`<p class="basketTotalText">Total:  $ ${priceAcumulation}</p>`;
+
+    calculateTotal(itemShoppingListAccumulted);
+    calculateIconCount(itemShoppingListAccumulted);
+
+    // counterIcon.textContent=quantityIcon;
 }
 
 function showBasketList(){
@@ -125,4 +134,51 @@ function showBasketList(){
         basketListContainer.classList.add('noneBasketList');
         basketTotal.classList.add('noneBasketList');
     }
+}
+
+function eraseIndividualItem(e){
+
+    nameItemToErase = '';
+
+    if(e.target.classList.contains('icon-close')){
+        itemToErase = e.target.parentElement.parentElement;
+        nameItemToErase = itemToErase.querySelector('.basketTitle').textContent;
+        itemToErase.remove();
+        itemShoppingListAccumulted = itemShoppingListAccumulted.filter((item)=>item.name != nameItemToErase);
+        saveLocalStorage(itemShoppingListAccumulted);
+        calculateIconCount(itemShoppingListAccumulted);
+        calculateTotal(itemShoppingListAccumulted);
+    }
+}
+
+function calculateIconCount(ShoppingList){
+
+    quantityIcon = 0;
+    console.log(ShoppingList);
+
+    if (ShoppingList == []){
+        quantityIcon = 0;
+    } else{
+        ShoppingList.forEach((item)=>{
+            quantityIcon = quantityIcon + item.quantity;
+        })
+    }
+
+    counterIcon.textContent=quantityIcon;
+}
+
+function calculateTotal(ShoppingList){
+    priceAcumulation = 0;
+    console.log(ShoppingList);
+
+    if (ShoppingList == []){
+        priceAcumulation = 0;
+    } else{
+        ShoppingList.forEach((item)=>{
+            priceAcumulation = priceAcumulation + (item.quantity*item.price);
+        })
+    }
+
+    basketTotal.innerHTML=`<p class="basketTotalText">Total:  $ ${priceAcumulation}</p>`;
+
 }
