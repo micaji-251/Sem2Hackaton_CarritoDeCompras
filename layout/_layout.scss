@@ -31,3 +31,13 @@
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
+
+.noneBasketList{
+    display: none;
+}
+
+.grid4{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    text-align: center;
+}

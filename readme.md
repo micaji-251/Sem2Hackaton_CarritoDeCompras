@@ -39,3 +39,24 @@ body {
 header{
 	background-color: black;
 }
+
+
+### DIBUJAR
+
+					<div class="basketItem flex">
+						<p class="quantity">2</p>
+						<p class="basketTitle">Carnivora</p>
+						<p class="basketPrecio">$30</p>
+						<div>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="icon-close"
+							>
+								<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+							</svg>
+						</div>
+					</div>
